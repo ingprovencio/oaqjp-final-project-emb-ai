@@ -8,7 +8,7 @@ def emotion_detector(text_in):
     try:
         response = requests.post(URL, headers=HEADERS, json = input_json)
         response_json = response.json()
-        return response_json
+        return response_json['emotionPredictions'][0]['emotion']
     except Exception as e:
         print ('Error: ' + str(e))
         return None
