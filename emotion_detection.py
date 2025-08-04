@@ -8,9 +8,9 @@ def emotion_detector(text_in):
     try:
         response = requests.post(URL, headers=HEADERS, json = input_json)
         response_json = response.json()
-        return response.json['text']
+        return response_json
     except Exception as e:
         print ('Error: ' + str(e))
         return None
 
-#print (emotion_detector("Me encanta esta nueva tecnología"))
+print (emotion_detector("Me encanta esta nueva tecnología"))
