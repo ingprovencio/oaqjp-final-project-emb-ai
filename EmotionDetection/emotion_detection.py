@@ -33,5 +33,4 @@ def emotion_detector(text_in):
     except Exception as e:
         print ('Error: ' + str(e))
         return None
-#package.emotion_detector = package.EmotionDetection
 #print (emotion_detector("Me encanta esta nueva tecnología"))
